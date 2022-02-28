@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "4282c31b-34bb-46b7-8f4a-a6ce8782c474",
+		"name": "scale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Scales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/scales",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get scale by date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/scale?date=2018-08-21",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scale"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2018-08-21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete scale by date",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/scale?date=2018-08-21",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scale"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2018-08-21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Scale",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\": \"2022-02-01\",\n    \"min\": 45,\n    \"max\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/scale",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scale"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
